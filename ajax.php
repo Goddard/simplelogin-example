@@ -15,6 +15,7 @@ if(trim(htmlentities(addslashes(filter_input(INPUT_GET, 'type')), ENT_QUOTES)) =
         
         if($result)
         {
+			$resultArray = array();
             if(password_verify($password, $result->password_hash))
             {
                 $currentDateTime = date('Y-m-d H:i:s');
